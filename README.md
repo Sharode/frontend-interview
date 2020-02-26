@@ -48,7 +48,16 @@ Please, answer the following questions in this readme, underneath the question
 
 1. Name a newer feature of javascript that you believe is extra useful, and discuss how you have used it in this project, or how you would use it if needed.
 
+
+* I would say Template literals as it enables JS developers to concatenate strings and variables much easier. Styled component is made possible because of the template literals.
+
 2. What are 3 things you think `React` does very poorly? What tools do this better, if any?
+
+ 1. Prior to the addition of Hook, State Management for large scale project was a headache. With some many reducers, consumers and nesting it made reading the code difficult. Prior to useContext, Redux did a better job with managing the state with a global store.
+
+ 2. I wish Error handling would done better like in Angular which provides a global handler. In react, if a variable is misspelled or a module isn't exported, the entire app crashes. Although they do note the source of the problem when it does crash.
+
+ 3. I like the simplistic approach of Vue, rendering html and css more than react. It is easier to migrate exsting projects because of Vue's html templates.
 
 ## Submissions
 
