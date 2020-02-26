@@ -3,6 +3,8 @@ import { Route, Switch } from "react-router-dom";
 import Navigation from "./Navigation";
 import Home from "./Home";
 import Profile from "./Profile";
+import Repositories from './Repositories'
+import Repository from './Repository'
 
 const AuthenticatedApplication = () => {
   return (
@@ -10,15 +12,14 @@ const AuthenticatedApplication = () => {
       <Navigation />
 
       <Switch>
-        <Route path="/profile">
-          <Profile />
-        </Route>
+        <Route path="/profile" exact component={Profile} />
 
-        <Route path="/">
-          <Home />
-        </Route>
+        <Route path="/repositories" exact component={Repositories} />
+        <Route path="/repositories/:id" component={Repository} />
 
-        <Route path="*">
+        <Route path="/" exact component={Home} />
+
+        <Route path="/*">
           <div>This path doesn't exist</div>
         </Route>
       </Switch>

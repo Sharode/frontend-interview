@@ -1,4 +1,6 @@
 import * as React from "react";
+import { RepositorySearchResults } from './RepositorySearchResults'
+import { Input, Label } from '../elements'
 
 /**
  * Once given an input, fetch the repositories we searched
@@ -14,15 +16,27 @@ import * as React from "react";
  */
 
 const Repositories = () => {
-  let searchResults;
+  const [searchResults, setSearchResults] = React.useState(null)
+
+
+  let timeout = null;
+  const handleSearchResult = (e) => {
+    clearTimeout(timeout)
+    const value = e.target.value
+    timeout = setTimeout(() => {
+      setSearchResults(value)
+    }, 1000)
+
+  }
   return (
     <div>
-      <input name="search-terms" />
+      <Label htmlFor="searh-terms"> Search request </Label>
+      <Input name="search-terms" autoFocus={true} onKeyUp={(e) => handleSearchResult(e)} placeholder='Enter in name of Repo...' />
       {searchResults ? (
         <RepositorySearchResults searchResults={searchResults} />
       ) : (
-        <div>Enter somee test to search github repositories</div>
-      )}
+          <div>Enter some test to search github repositories</div>
+        )}
     </div>
   );
 };
