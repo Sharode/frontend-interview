@@ -53,11 +53,11 @@ Please, answer the following questions in this readme, underneath the question
 
 2. What are 3 things you think `React` does very poorly? What tools do this better, if any?
 
- 1. Prior to the addition of Hook, State Management for large scale project was a headache. With some many reducers, consumers and nesting it made reading the code difficult. Prior to useContext, Redux did a better job with managing the state with a global store.
+ * Prior to the addition of Hook, State Management for large scale project was a headache. With some many reducers, consumers and nesting it made reading the code difficult. Prior to useContext, Redux did a better job with managing the state with a global store.
 
- 2. I wish Error handling would done better like in Angular which provides a global handler. In react, if a variable is misspelled or a module isn't exported, the entire app crashes. Although they do note the source of the problem when it does crash.
+ * I wish Error handling would done better like in Angular which provides a global handler. In react, if a variable is misspelled or a module isn't exported, the entire app crashes. Although they do note the source of the problem when it does crash.
 
- 3. I like the simplistic approach of Vue, rendering html and css more than react. It is easier to migrate exsting projects because of Vue's html templates.
+ * I like the simplistic approach of Vue, rendering html and css more than react. It is easier to migrate exsting projects because of Vue's html templates.
 
 ## Submissions
 
